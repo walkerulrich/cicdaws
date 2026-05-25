@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ubuntu/project_devops
+    destination: /home/ubuntu/nomrepertoire
 permissions:
-  - object: /home/ubuntu/project_devops
+  - object: /home/ubuntu/nomrepertoire
     owner: ubuntu
     group: ubuntu
 hooks:
@@ -25,7 +25,7 @@ hooks:
       - location: scripts/nginx.sh
         timeout: 300
         runas: ubuntu
- ApplicationStop:
+  ApplicationStop:
       - location: scripts/stop_app.sh
         timeout: 300
         runas: ubuntu
